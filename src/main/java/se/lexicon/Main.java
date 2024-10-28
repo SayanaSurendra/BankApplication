@@ -4,14 +4,17 @@ package se.lexicon;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        BankAccount account1=new BankAccount(20,"Sayana Surendran","sayana@gmail.com",123456789);
+        account1.deposit(2000);
+
+        BankAccount account2=new BankAccount(1000,"Sayana","abc@gmail.com",123456789);
+        account2.withdraw(2000);
+
+
+        System.out.println(account1.getAccountInfo());
+        System.out.println(account2.getAccountInfo());
+
+
     }
 }
